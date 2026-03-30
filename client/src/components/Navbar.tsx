@@ -1,10 +1,10 @@
 /**
  * Navbar — "Obsidian Studio" design
- * Sticky, translucent blur, yellow accent on active/hover
- * Logo: Poppins 800, yellow accent on "CAR"
+ * Sticky with blur, yellow accent, logo + nav + CTA
  */
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ChevronRight } from "lucide-react";
 
 const navLinks = [
   { label: "Usługi", href: "#services" },
@@ -72,6 +72,15 @@ export default function Navbar() {
               <span style={{ color: "#ffffff" }}>GABI </span>
               <span style={{ color: "#ffd000" }}>CAR</span>
               <span style={{ color: "#ffffff" }}> DETAILING</span>
+              <span style={{ 
+                color: "#ff6b6b", 
+                fontSize: "0.6rem", 
+                marginLeft: "0.5rem",
+                fontWeight: "600",
+                padding: "0.1rem 0.3rem",
+                backgroundColor: "rgba(255,107,107,0.2)",
+                borderRadius: "0.2rem"
+              }}>DEMO</span>
             </div>
           </button>
 

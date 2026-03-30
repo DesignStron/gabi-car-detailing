@@ -54,6 +54,17 @@ export default function Footer() {
                 }}
               >
                 GABI <span style={{ color: "#ffd000" }}>CAR</span> DETAILING
+                <span style={{ 
+                  color: "#ff6b6b", 
+                  fontSize: "0.5rem", 
+                  marginLeft: "0.3rem",
+                  fontWeight: "600",
+                  padding: "0.1rem 0.25rem",
+                  backgroundColor: "rgba(255,107,107,0.2)",
+                  borderRadius: "0.2rem",
+                  display: "inline-block",
+                  verticalAlign: "super"
+                }}>DEMO</span>
               </span>
             </div>
             <p

@@ -7,6 +7,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Calculator, ChevronRight } from "lucide-react";
+import { useCalculator } from "@/contexts/CalculatorContext";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type CarSize = "small" | "medium" | "large";
@@ -122,6 +123,7 @@ function StepHeader({ number, title }: { number: string; title: string }) {
 
 // ── Main component ─────────────────────────────────────────────────────────
 export default function PricingCalculator() {
+  const { setCalculatorData } = useCalculator();
   const [carSize, setCarSize] = useState<CarSize>("medium");
   const [service, setService] = useState<Service>("full");
   const [dirtLevel, setDirtLevel] = useState<DirtLevel>("low");
@@ -145,6 +147,20 @@ export default function PricingCalculator() {
   };
 
   const showInterior = ["interior", "full", "ceramic"].includes(service);
+
+  // Save calculator data when user clicks "Umów wizytę"
+  const handleBookingClick = () => {
+    setCalculatorData({
+      carSize,
+      service,
+      dirtLevel,
+      interiorType,
+      extras,
+      totalPrice: total,
+    });
+    const el = document.querySelector("#contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section
@@ -649,10 +665,7 @@ export default function PricingCalculator() {
               {/* CTA */}
               <button
                 className="btn-yellow w-full mt-6 justify-center"
-                onClick={() => {
-                  const el = document.querySelector("#contact");
-                  if (el) el.scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={handleBookingClick}
               >
                 Umów wizytę
                 <ChevronRight size={16} />

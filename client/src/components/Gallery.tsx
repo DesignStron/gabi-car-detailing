@@ -29,30 +29,9 @@ const galleryItems = [
   },
   {
     id: 3,
-    src: STUDIO_IMG,
-    title: "Studio Gabi Car Detailing",
-    tag: "Nasze studio",
-    span: "col-span-1",
-  },
-  {
-    id: 4,
-    src: HERO_IMG,
-    title: "Porsche 911 – Full Detailing",
-    tag: "Full Package",
-    span: "col-span-2",
-  },
-  {
-    id: 5,
     src: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80",
     title: "Detailing wnętrza",
     tag: "Interior",
-    span: "col-span-1",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-    title: "Polerowanie maszynowe",
-    tag: "Paint Correction",
     span: "col-span-1",
   },
 ];

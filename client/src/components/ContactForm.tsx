@@ -4,9 +4,10 @@
  * On submit: show success message
  * Left: contact info | Right: form
  */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, CheckCircle, Send } from "lucide-react";
+import { useCalculator } from "@/contexts/CalculatorContext";
 
 interface FormData {
   name: string;
@@ -44,6 +45,7 @@ const contactInfo = [
 ];
 
 export default function ContactForm() {
+  const { calculatorData, clearCalculatorData } = useCalculator();
   const [form, setForm] = useState<FormData>({
     name: "",
     phone: "",
@@ -54,6 +56,61 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
+
+  // Auto-fill message when calculator data is available
+  useEffect(() => {
+    if (calculatorData) {
+      const serviceLabels = {
+        exterior: "Mycie zewnętrzne",
+        interior: "Detailing wnętrza", 
+        full: "Full Detailing",
+        correction: "Korekta lakieru",
+        ceramic: "Powłoka ceramiczna",
+      };
+
+      const carSizeLabels = {
+        small: "małe",
+        medium: "średnie", 
+        large: "duże",
+      };
+
+      const dirtLabels = {
+        low: "lekkim",
+        medium: "średnim",
+        high: "mocnym",
+      };
+
+      const interiorLabels = {
+        fabric: "tkaninowa",
+        leather: "skórzana",
+        alcantara: "z alcantary",
+      };
+
+      const extraLabels = {
+        petHair: "usuwanie sierści",
+        ozone: "ozonowanie",
+        impregnation: "impregnacja",
+        engine: "mycie silnika",
+      };
+
+      let autoMessage = `Dzień dobry,\n\n`;
+      autoMessage += `Chciałbym/chciałabym umówić się na usługę: ${serviceLabels[calculatorData.service]}\n`;
+      autoMessage += `Posiadam ${carSizeLabels[calculatorData.carSize]} pojazd z ${dirtLabels[calculatorData.dirtLevel]} poziomem zabrudzenia.\n`;
+      
+      if (["interior", "full", "ceramic"].includes(calculatorData.service)) {
+        autoMessage += `Tapicerka w pojeździe jest ${interiorLabels[calculatorData.interiorType]}.\n`;
+      }
+
+      if (calculatorData.extras.length > 0) {
+        autoMessage += `Dodatkowo jestem zainteresowany/a: ${calculatorData.extras.map(e => extraLabels[e]).join(", ")}.\n`;
+      }
+
+      autoMessage += `\nCzy mają Państwo wolne terminy w najbliższym czasie?\n`;
+      autoMessage += `Z góry dziękuję za odpowiedź.`;
+
+      setForm(prev => ({ ...prev, message: autoMessage }));
+    }
+  }, [calculatorData]);
 
   const validate = (): boolean => {
     const newErrors: Partial<FormData> = {};
@@ -75,6 +132,7 @@ export default function ContactForm() {
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
+      clearCalculatorData(); // Clear calculator data after successful submission
     }, 1200);
   };
 
@@ -264,6 +322,40 @@ export default function ContactForm() {
               padding: "2rem",
             }}
           >
+            {/* Calculator info */}
+            {calculatorData && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-6 p-4 rounded-lg"
+                style={{
+                  backgroundColor: "rgba(255,208,0,0.1)",
+                  border: "1px solid rgba(255,208,0,0.2)",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    color: "#ffd000",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  📋 Wypełniono na podstawie kalkulatora
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "0.9rem",
+                    color: "rgba(255,255,255,0.7)",
+                  }}
+                >
+                  Szacowana cena: <span style={{ color: "#ffd000", fontWeight: 600 }}>{calculatorData.totalPrice} zł</span>
+                </div>
+              </motion.div>
+            )}
+
             <AnimatePresence mode="wait">
               {submitted ? (
                 <motion.div

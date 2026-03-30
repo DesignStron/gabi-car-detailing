@@ -1,0 +1,37 @@
+[2026-03-30T14:06:56.217Z] {"timestamp":1774879613694,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-30T14:06:56.218Z] {"timestamp":1774879613731,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-30T14:06:56.218Z] {"timestamp":1774879615362,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-30T14:07:13.343Z] {"timestamp":1774879631651,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Gallery.tsx"],"stack":null}
+[2026-03-30T14:07:13.343Z] {"timestamp":1774879631651,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:07:13.343Z] {"timestamp":1774879631696,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Gallery.tsx"],"stack":null}
+[2026-03-30T14:07:13.343Z] {"timestamp":1774879631697,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:07:43.709Z] {"timestamp":1774879662580,"level":"DEBUG","args":["[vite]","hot updated: /src/App.tsx"],"stack":null}
+[2026-03-30T14:07:43.709Z] {"timestamp":1774879662581,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:07:47.700Z] {"timestamp":1774879666166,"level":"DEBUG","args":["[vite]","hot updated: /src/App.tsx"],"stack":null}
+[2026-03-30T14:07:47.700Z] {"timestamp":1774879666166,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:07:51.705Z] {"timestamp":1774879670769,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PricingCalculator.tsx"],"stack":null}
+[2026-03-30T14:07:51.705Z] {"timestamp":1774879670770,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:00.249Z] {"timestamp":1774879679565,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PricingCalculator.tsx"],"stack":null}
+[2026-03-30T14:08:00.249Z] {"timestamp":1774879679566,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:00.249Z] {"timestamp":1774879679881,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PricingCalculator.tsx"],"stack":null}
+[2026-03-30T14:08:00.249Z] {"timestamp":1774879679882,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:04.792Z] {"timestamp":1774879684064,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PricingCalculator.tsx"],"stack":null}
+[2026-03-30T14:08:04.792Z] {"timestamp":1774879684065,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:10.259Z] {"timestamp":1774879688884,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactForm.tsx"],"stack":null}
+[2026-03-30T14:08:10.260Z] {"timestamp":1774879688884,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:16.213Z] {"timestamp":1774879694262,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactForm.tsx"],"stack":null}
+[2026-03-30T14:08:16.213Z] {"timestamp":1774879694263,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:21.837Z] {"timestamp":1774879701612,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactForm.tsx"],"stack":null}
+[2026-03-30T14:08:21.837Z] {"timestamp":1774879701613,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:23.715Z] {"timestamp":1774879702644,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactForm.tsx"],"stack":null}
+[2026-03-30T14:08:23.715Z] {"timestamp":1774879702644,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:08:31.703Z] {"timestamp":1774879710438,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactForm.tsx"],"stack":null}
+[2026-03-30T14:08:31.703Z] {"timestamp":1774879710438,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:09:45.701Z] {"timestamp":1774879785419,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactForm.tsx"],"stack":null}
+[2026-03-30T14:09:45.701Z] {"timestamp":1774879785419,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:09:53.703Z] {"timestamp":1774879793418,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Navbar.tsx"],"stack":null}
+[2026-03-30T14:09:53.703Z] {"timestamp":1774879793418,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:09:57.762Z] {"timestamp":1774879797677,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Navbar.tsx"],"stack":null}
+[2026-03-30T14:09:57.762Z] {"timestamp":1774879797677,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-30T14:10:12.229Z] {"timestamp":1774879810449,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-03-30T14:10:12.229Z] {"timestamp":1774879810452,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
